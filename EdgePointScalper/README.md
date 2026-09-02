@@ -18,6 +18,9 @@ Breakout del canale high/low ultime N barre con pending bilaterali (logica Donch
 
 Entry a nuova barra M15 se spread ok, nessuna posizione, DD ok → 2 stop. Exit: TP/SL + trailing ogni tick, pending a scadenza.
 
+## Variants
+- `variants/`: `EdgePointScalper_minimal` (debug price-action pura, build OK) e `EdgePointScalper_Tick` (clone every-tick con bar-caching, build OK)
+
 ## Optimization
-- `optimization/`: .opt XAUUSD (H1 + M15 tick), `Algory_Replica` .opt (EA non nel repo)
-- `optimization/reference-novascalper/`: report/test/set dell'originale NovaScalper (base del clone)
+- `optimization/`: .opt XAUUSD (H1 + M15 tick)
+- `optimization/reference-novascalper/`: report/test/set dell'originale NovaScalper (base del clone) + `NovaScalper.ex5`
