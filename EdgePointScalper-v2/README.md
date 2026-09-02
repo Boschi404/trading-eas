@@ -13,3 +13,6 @@ Come v1 ma single-side trend-only + ottimizzato tick (CopyRates, trailing rate-l
 | Risk | Risk% / FixedLot / MaxLot / Spread / Magic | 2% / 0.01 / 1.0 / 3000 pt / 20240501 |
 
 Diff vs v1: un solo lato (direzione trend), niente ATR/ADX dual-mode, niente session filter e max-DD guard; più controlli stops/freeze-level e AutoTrading.
+
+## Optimization
+- `optimization/`: .opt XAUUSD M15 2020-2026

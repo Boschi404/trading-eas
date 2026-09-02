@@ -17,3 +17,7 @@ Breakout del canale high/low ultime N barre con pending bilaterali (logica Donch
 | Expiry pending | 612 barre | |
 
 Entry a nuova barra M15 se spread ok, nessuna posizione, DD ok → 2 stop. Exit: TP/SL + trailing ogni tick, pending a scadenza.
+
+## Optimization
+- `optimization/`: .opt XAUUSD (H1 + M15 tick), `Algory_Replica` .opt (EA non nel repo)
+- `optimization/reference-novascalper/`: report/test/set dell'originale NovaScalper (base del clone)

@@ -11,4 +11,4 @@ qua teniamo organizzati tutti i bot, set files, ottimizazioni, eventuali validaz
 | [EdgePointMultiStrat](EdgePointMultiStrat/) | 6 engine + ADX regime + martingale 1.3 | M5 | qualsiasi | 0.5%, DD 25% |
 | [EdgePointRejectionScaler](EdgePointRejectionScaler/) | Pin-bar rejection, doppio TP ATR | H4 + M30 | qualsiasi | lotto 0.02, RR 1:2.5/5 |
 
-Ogni cartella: `.mq5` sorgente + `.ex5` compilato + `README.md` dettagliato.
+Ogni cartella: `.mq5` sorgente + `.ex5` compilato + `README.md` dettagliato + `optimization/` (.opt/.set/report dove presenti).

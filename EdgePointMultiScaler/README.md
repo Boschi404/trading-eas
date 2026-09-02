@@ -15,3 +15,6 @@
 | InpMinRecoveryPct | 0.6 | ❌ orfano |
 
 SL = estremo candela prec. ± buffer. Max 1 ciclo, no magic, no trailing/breakeven, no filtri spread/orari. ⚠️ Scheletro: `NormalizeLot()` mai chiamata, RR spesso sfavorevole (SL = intera candela H4).
+
+## Optimization
+- `optimization/`: 6 .opt H4 2010-2026 (ESCEURc, NDQUSD, SPIUSD/c, XAGUSD, XAUUSD) + `ndqusd-multiscaler.set`

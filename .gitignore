@@ -3,3 +3,5 @@
 *.cache
 Tester/
 *.set.cache
+# archivi caricati via chat, mai nel repo
+*.zip
