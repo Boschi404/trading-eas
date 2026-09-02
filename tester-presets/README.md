@@ -11,7 +11,7 @@
 | EdgePointMultiStrat | 12 | sì |
 | NovaBenza | 12 | sì |
 | Algory_Replica | 11 | sì |
-| UTBOSCHIEA | 10 | no (solo `.ex5` in `BinOnly/`) |
+| UTBOSCHIEA | 10 | no (ex5 eliminato, restano solo preset) |
 | ExpertMAPSARSizeOptimized | 10 | sì (vendor-stock) |
 | BoschiORB | 8 | sì (⚠️ non compila) |
 | EdgePointScalper-v2 | 9 | sì |

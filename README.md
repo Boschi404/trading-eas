@@ -45,7 +45,6 @@ qua teniamo organizzati tutti i bot, set files, ottimizazioni, eventuali validaz
 | Cartella | Contenuto |
 |---|---|
 | [LabTests](LabTests/) | toy di debug |
-| [BinOnly](BinOnly/) | `.ex5` senza sorgente |
 | [vendor-stock](vendor-stock/) | MT5 stock + EA Market |
 | [tester-presets](tester-presets/) | 660 preset in 72 gruppi |
 
