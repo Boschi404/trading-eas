@@ -2,56 +2,51 @@
 
 qua teniamo organizzati tutti i bot, set files, ottimizazioni, eventuali validazioni
 
-## EdgePoint (nostri, attivi)
+## Priorità 1 — funzionanti ([dettagli](Priorita-1/))
 
-| Bot | Strategia | TF | Build 2026-09-03 |
-|---|---|---|---|
-| [EdgePointScalper](EdgePointScalper/) | Breakout canale, pending bilaterali (+`variants/`: minimal debug, Tick every-tick) | M15 + EMA H4 | OK |
-| [EdgePointScalper-v2](EdgePointScalper-v2/) | Come v1, single-side trend-only, tick-opt | M15 + EMA H4 | OK |
-| [EdgePointMultiScaler](EdgePointMultiScaler/) | Direzionale 2 gambe TP1/TP2, ⚠️ scheletro | H4 | OK (ma logica da riscrivere) |
-| [EdgePointMultiScaler-FX](EdgePointMultiScaler-FX/) | Breakout impulsivo H4, SL/TP ATR | H4 | OK |
-| [EdgePointMultiStrat](EdgePointMultiStrat/) | 6 engine + ADX regime + martingale 1.3 | M5 | OK (ma segnali repaint — vedi review) |
-| [EdgePointRejectionScaler](EdgePointRejectionScaler/) | Pin-bar rejection, doppio TP ATR | H4 + M30 | OK |
-
-## Algory
-
-| Bot | Nota | Build |
+| Bot | Strategia | Build |
 |---|---|---|
-| [AlgoryPilot](AlgoryPilot/) | chart-automation via file comandi | OK |
-| [AlgoryReplica](AlgoryReplica/) | engine v129 multi-segnale, SL 2.9×ATR TP 3.5×ATR (+`optimization/` .opt) | OK |
+| [EdgePointScalper](Priorita-1/EdgePointScalper/) | Breakout canale M15, pending bilaterali (+`variants/` minimal/Tick) | OK |
+| [EdgePointScalper-v2](Priorita-1/EdgePointScalper-v2/) | Single-side trend-only, tick-opt | OK |
+| [EdgePointMultiScaler-FX](Priorita-1/EdgePointMultiScaler-FX/) | Breakout H4 FX, SL/TP ATR + 7 filtri | OK |
+| [EdgePointRejectionScaler](Priorita-1/EdgePointRejectionScaler/) | Pin-bar H4 + M30, doppio TP ATR | OK |
 
-## Famiglia Nova
+## Priorità 2 — compilano, da revisionare ([dettagli](Priorita-2/))
 
-| Bot | Nota | Build |
-|---|---|---|
-| [NovaBenza](NovaBenza/) | SMC/ICT Pro AlphaMindAI v2.2 | OK |
-| [NovaCancer](NovaCancer/) | inversione su soglia equity | OK |
-| [NovaGamble](NovaGamble/) | Quasimodo + ZigZag | OK |
-| [NovaHedge](NovaHedge/) | Heikin Ashi multi-close / hedge RSI | OK |
-| [NovaArbitrage](NovaArbitrage/) | stat-arb z-score | ⚠️ BROKEN (7 errors) |
+| Bot | Build |
+|---|---|
+| [EdgePointMultiScaler](Priorita-2/EdgePointMultiScaler/) | OK (scheletro) |
+| [AlgoryPilot](Priorita-2/AlgoryPilot/) | OK |
+| [AlgoryReplica](Priorita-2/AlgoryReplica/) | OK 1w (+`optimization/` .opt) |
+| [NovaBenza](Priorita-2/NovaBenza/) | OK |
+| [NovaCancer](Priorita-2/NovaCancer/) | OK 2w |
+| [NovaGamble](Priorita-2/NovaGamble/) | OK 2w |
+| [NovaHedge](Priorita-2/NovaHedge/) | OK |
+| [MerfolzFX](Priorita-2/MerfolzFX/) | OK (⚠️ martingale) |
+| [EPMultiAssetScalper](Priorita-2/EPMultiAssetScalper/) | OK |
+| [quintupleEMA](Priorita-2/quintupleEMA/) | OK 1w |
+| [SuperHMD](Priorita-2/SuperHMD/) | OK 2w |
 
-## Boschi & altri
+## Priorità 3 — rotti o pericolosi ([dettagli](Priorita-3/))
 
-| Bot | Nota | Build |
-|---|---|---|
-| [BoschiORB](BoschiORB/) | breakout range asiatica + martingale | ⚠️ BROKEN (2 errors) |
-| [SuperHMD](SuperHMD/) | DEMA50 + SuperTrend + HeikenAshi | OK |
-| [SuperBoschiTrend](SuperBoschiTrend/) | DEMA + doppio Supertrend (MQL4 da portare) | ⚠️ BROKEN |
-| [quintupleEMA](quintupleEMA/) | allineamento 5 EMA | OK |
-| [ScalpingGengar](ScalpingGengar/) | channel-breakout M5 (file corrotto?) | ⚠️ BROKEN (45 errors) |
-| [ScalpingVez](ScalpingVez/) | trend EMA50 H4 + M1 | ⚠️ BROKEN (8 errors) |
-| [MerfolzFX](MerfolzFX/) | Breakout Gold PRO + martingale | OK |
-| [EPMultiAssetScalper](EPMultiAssetScalper/) | mean-reversion BB/RSI H1 | OK |
-| [STOCHastic](STOCHastic/) | template stocastico MQL4-style | ⚠️ BROKEN |
-| [SupaNiga](SupaNiga/) | supertrend (manca indicatore esterno) | ⚠️ BROKEN |
+| Bot | Problema |
+|---|---|
+| [NovaArbitrage](Priorita-3/NovaArbitrage/) | 7 errors |
+| [ScalpingGengar](Priorita-3/ScalpingGengar/) | 45 errors |
+| [ScalpingVez](Priorita-3/ScalpingVez/) | 8 errors |
+| [STOCHastic](Priorita-3/STOCHastic/) | MQL4 da portare |
+| [SupaNiga](Priorita-3/SupaNiga/) | manca indicatore |
+| [SuperBoschiTrend](Priorita-3/SuperBoschiTrend/) | MQL4 da portare |
+| [BoschiORB](Priorita-3/BoschiORB/) | 2 errors |
+| [EdgePointMultiStrat](Priorita-3/EdgePointMultiStrat/) | repaint + martingale senza cap |
 
-## Supporto
+## Supporto (fuori priorità)
 
 | Cartella | Contenuto |
 |---|---|
-| [LabTests](LabTests/) | toy di debug (TestBuy, TestMinimal, UltraMinimal) |
-| [BinOnly](BinOnly/) | `.ex5` senza sorgente (UT BOSCHI EA) |
-| [vendor-stock](vendor-stock/) | MT5 stock + 10 EA Market acquistati |
-| [tester-presets](tester-presets/) | 660 preset tester in 72 gruppi per EA |
+| [LabTests](LabTests/) | toy di debug |
+| [BinOnly](BinOnly/) | `.ex5` senza sorgente |
+| [vendor-stock](vendor-stock/) | MT5 stock + EA Market |
+| [tester-presets](tester-presets/) | 660 preset in 72 gruppi |
 
-Ogni cartella bot: `.mq5` + `.ex5` (se compila) + `README.md` + `optimization/` dove presente.
+Build verificate 2026-09-03 via metaeditor64 (log, non exit code).
